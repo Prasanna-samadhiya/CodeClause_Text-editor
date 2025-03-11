@@ -1,4 +1,4 @@
-name: Text-Editor CI/CD Pipeline
+name:  Major Project CI/CD Pipeline
 
 on:
   push:
@@ -24,6 +24,9 @@ jobs:
         
       - name: Build project
         run: npm run build
+        
+      - name: Test project
+        run: npm run test
         
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.1
